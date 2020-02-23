@@ -12,12 +12,14 @@ public class Main {
         JsonReader jsonReader = new JsonReader();
         JsonWriter jsonWriter = new JsonWriter();
         try {
-            String path = Paths.get(args[0]).toAbsolutePath().toString();
-            Collection col = jsonReader.readCollection(path);
+            String inputPath = Paths.get(args[0]).toAbsolutePath().toString();
+            String outputPath = Paths.get(args[1]).toAbsolutePath().toString();
+            Collection col = jsonReader.readCollection(inputPath);
 
             for(HumanBeing h : col.getCollection())
                 System.out.println(h.id);
-//            jsonWriter.writeCollection(col, path);
+
+            jsonWriter.writeCollection(col, outputPath);
         } catch (IOException e) {
             e.printStackTrace();
         }

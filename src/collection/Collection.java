@@ -10,7 +10,7 @@ public class Collection {
     private ArrayList <HumanBeing> col;
 
     public void setCollectionAsArray(HumanBeing[] arr_col){
-        col = (ArrayList<HumanBeing>) Arrays.asList(arr_col);
+        col = new ArrayList<HumanBeing>(Arrays.asList(arr_col));
     }
 
     public ArrayList <HumanBeing> getCollection(){
