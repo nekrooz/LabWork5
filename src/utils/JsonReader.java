@@ -19,7 +19,7 @@ public class JsonReader {
             Collection col = new Collection();
             col.setCollectionAsArray( objectMapper.readValue(new FileReader(path), HumanBeing[].class) );
             return col;
-        }catch (ClassCastException e){
+        }catch (ClassCastException e) {
             System.out.println(e.getMessage());
             return null;
         }
