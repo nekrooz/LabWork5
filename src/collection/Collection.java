@@ -9,14 +9,23 @@ import java.util.Arrays;
 public class Collection {
     private ArrayList <HumanBeing> col;
 
-    public void setCollectionAsArray(HumanBeing[] arr_col){
-        col = new ArrayList<HumanBeing>(Arrays.asList(arr_col));
+    public Collection(){
+        col = new ArrayList<>();
     }
 
-    public ArrayList <HumanBeing> getCollection(){
-        return col;
+    public Collection(HumanBeing[] arr_col){
+        col = new ArrayList<>(Arrays.asList(arr_col));
     }
-//    public T toArray(){
-//        return col.toArray();
-//    }
+
+    public Object[] asArray(){
+        return col.toArray();
+    }
+
+    public void clear(){
+        col.clear();
+    }
+
+    public void add(HumanBeing h){
+        col.add(h);
+    }
 }
