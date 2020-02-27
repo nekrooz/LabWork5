@@ -10,10 +10,10 @@ import java.io.IOException;
 public class JsonWriter {
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    public void writeCollection(Collection col, String path) throws IOException {
+    public void writeCollection(String path, Collection col) throws IOException {
         File file = new File(path);
         FileOutputStream outputStream = new FileOutputStream(file);
 
-        outputStream.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(col).getBytes());
+        outputStream.write(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(col.asArray()).getBytes());
     }
 }
