@@ -1,3 +1,4 @@
+
 # Lab 5
 
 
@@ -71,3 +72,8 @@ public enum Mood {
     RAGE;
 }
 ```
+=======
+# LabWork5
+Laboratory work 5
+
+

@@ -3,6 +3,7 @@ package comps;
 public class Car {
     private String name; //Поле может быть null
 
+
     public Car(String name){
         this.name = name;
     }
@@ -12,5 +13,9 @@ public class Car {
     }
     public void setName(String name) {
         this.name = name;
+    }
+=======
+    public String getName(){
+        return name;
     }
 }

@@ -10,6 +10,9 @@ public class HumanBeing {
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     @JsonDeserialize(as = Coordinates.class)
+=======
+    public Integer id;
+    private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
     private java.time.LocalDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
     private boolean realHero;
@@ -145,4 +148,6 @@ public class HumanBeing {
                 + "\n\tMood: " + moodString
                 + "\n\tCar: " + carString;
     }
+    private Car car; //Поле не может быть null
+
 }
