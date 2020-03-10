@@ -1,5 +1,6 @@
-package commands;
+package commandList;
 
+import utils.Logger;
 import utils.UserInterface;
 
 public class Help extends Command {
@@ -10,7 +11,6 @@ public class Help extends Command {
     public void execute(UserInterface ui, String[] args){
         CommandsManager commandsManager = new CommandsManager();
 
-        for(CommandInterface com : commandsManager.getCommands())
-            ui.print(com.getName(), ":", com.getHelp());
+        commandsManager.getCommandList().forEach(com -> Logger.printl(com.getName(), ":", com.getHelp()));
     }
 }

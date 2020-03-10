@@ -1,6 +1,6 @@
-package commands;
+package commandList;
 
-import comps.HumanBeing;
+import utils.Logger;
 import utils.UserInterface;
 
 public class Show extends Command {
@@ -9,7 +9,11 @@ public class Show extends Command {
     }
 
     public void execute(UserInterface ui, String[] args){
+        if(ui.getCollection().getSize() == 0){
+            Logger.printl("Collection is empty");
+            return;
+        }
         for(Object hb : ui.getCollection().asArray())
-            ui.print(hb.toString(), "\n");
+            Logger.printl(hb.toString());
     }
 }

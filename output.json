@@ -1,13 +1,1 @@
-[ {
-  "id" : 1,
-  "name" : null,
-  "coordinates" : null,
-  "creationDate" : null,
-  "realHero" : false,
-  "hasToothpick" : false,
-  "impactSpeed" : 0.0,
-  "soundtrackName" : null,
-  "minutesOfWaiting" : 0.0,
-  "mood" : null,
-  "car" : null
-} ]
+[ ]

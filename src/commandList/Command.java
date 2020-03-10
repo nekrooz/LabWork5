@@ -1,4 +1,4 @@
-package commands;
+package commandList;
 
 import utils.UserInterface;
 

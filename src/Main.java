@@ -1,14 +1,17 @@
+import commandList.Privet;
 import exceptions.CommandNotFoundException;
 import utils.IO;
+import utils.Logger;
 
 public class Main {
     public static void main(String[] args){
 //        try {
         try{
+            Logger.randPrivet();
             IO io = new IO(args[0], args[1]);
             io.listen();
-        }catch (CommandNotFoundException e){
-            System.out.println(e.getMessage());
+        }catch (Exception e){
+            e.printStackTrace();
         }
 
 
